@@ -1,9 +1,7 @@
 import Combine
 import Foundation
 
-/*
- Advent of Code Day 1: Secret Entrance.
- */
+// MARK: - Solution
 
 // Get the list of rotations in the given combination.
 let rotations = Input.parseInput(string: Input.example)
@@ -42,9 +40,7 @@ let _ = positions
     .reduce(0, +)
     .sink{ sum in print("Part 2:", sum) }
 
-/*
- Logic for safe dial movements.
- */
+// MARK: - Safe Dial Logic
 
 /// Returns the new position on the dial after turning through the
 /// given distance.
@@ -104,9 +100,8 @@ func isZero(position: Int) -> Bool {
     position == 0
 }
 
-/*
- A structure to represent the puzzle input.
- */
+// MARK: - Input
+
 struct Input {
 
     /// Publishes a stream of safe dial movements derived from the given
