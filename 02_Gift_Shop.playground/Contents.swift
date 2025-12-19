@@ -54,7 +54,7 @@ extension Int {
         let length = lengthInDigits()
         guard length >= repeats, length % repeats == 0 else { return false }
 
-        // The `fix` is the leftmost part of the number, the part that will
+        // The `fix` is the rightmost part of the number, the part that will
         // be repeated.
         let tens = Int(pow(10, Double(length / repeats)))
         let fix = self - (tens * (self / tens))
